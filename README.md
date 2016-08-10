@@ -3,6 +3,12 @@ A File-Selector for freshsync written in Java
 
 This is to be used in conjunction with freshsync (https://github.com/frequem/freshsync/)
 
+#Building
+	
+To build, run:
+
+    ant
+
 #Examples
 
 	java -jar selector.jar
