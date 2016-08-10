@@ -16,7 +16,7 @@ import javax.swing.JScrollPane;
 public class Selector {
 
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("FReshSyncSelector v0.2");
+		JFrame frame = new JFrame("freshsync-selector v0.2");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new BorderLayout());
 		frame.setSize(640, 480);
