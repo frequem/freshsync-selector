@@ -1,5 +1,5 @@
 # freshsync-selector
-A File-Selector for FReshSync written in Java
+A File-Selector for freshsync written in Java
 
 This is to be used in conjunction with freshsync (https://github.com/frequem/freshsync/)
 
