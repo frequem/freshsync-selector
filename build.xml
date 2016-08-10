@@ -1,0 +1,33 @@
+<project name="filesync-selector" default="release" basedir=".">
+  <description>ANT Buildfile for filesync-selector</description>
+  <property name="src" location="src"/>
+  <property name="bin" location="bin"/>
+  <property name="release" location="release"/>
+
+  <target name="init">
+    <tstamp/>
+    <mkdir dir="${bin}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source">
+    <javac srcdir="${src}" destdir="${bin}"/>
+  </target>
+
+  <target name="release" depends="compile"
+        description="generate the release jar file">
+    <mkdir dir="${release}"/>
+    <jar destfile="${release}/selector-${DSTAMP}.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="com.frequem.freshsync.Selector"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${bin}"/>
+        </jar>
+  </target>
+
+  <target name="clean" description="clean up">
+    <delete dir="${bin}"/>
+    <delete dir="${release}"/>
+  </target>
+</project>
